@@ -49,79 +49,120 @@ body {
    min-height: 600px;
 }
 
-/* page header */
-header {
-   background: #85cde8;
-   width: 100%;
-   color: #FFEFC1;
-   font-size: 48px;
-   text-align: center;
-   line-height: 1.5em;
-   margin-bottom: 0;
-}
-
-.titleImage {
-   display: block;
-   margin: 30% auto; /* Center the image vertically and horizontally */
-   width: 50%;
-   min-width: 422px;
-}
 
 /* Welcome screen */
 .WelcomeScreen {
+
    background-image: url("screen_with_text.png");
    background-size: cover;
    background-position: center center;
    background-clip: content-box;
    height: 100vh; /* Set a minimum height to cover the entire viewport */
+
+}
+
+
+/*NAVIGATION BAR*/
+
+#NavBar{
+
+   padding-top: 3%;
+   padding-left: 3%;
+   font-size: 3.5vw;
+   color:white;
+   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+   
+
+}
+
+#NavBar a {
+
+   text-decoration: none;
+
+}
+
+#NavBar a:visited{
+
+
+      color: white;
+}
+
+
+
+/* CENTER TITLE*/
+
+
+#CenterTitle{
+
+   
    display: flex;
+   flex-direction: row;
    justify-content: center;
    align-items: center;
+   height: 80%;
+
+
 }
 
 #Title{
 
+   background-color: rgb(1,23,23);
+   width: 75%;
+   height: 40%;
 
    display: flex;
    flex-direction: column;
    justify-content: center;
    align-items: center;
 
-
 }
 
-#Title p{
+#Name{
 
    font-size: 10vw;
    color: white;
-   align-items: center;
    text-align: center;
-   background-color: rgb(1,23,23);
-   padding-left: 20px;
-   padding-right: 20px;
+   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 
 
 }
 
+#Description{
+
+   color: white;
+   font-size: 4vw;
+   text-align: center;
+   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+
+
+
+
+
+
 .AboutMe {
+
    display: flex;
    justify-content: flex-end; /* Align to the right */
    align-items: center;
    height: 100vh;
    background-image: url("Chicago.jpg");
    background-size: 100% 100%;
+   
 
 }
 
 #Bio{
 
    line-height: 1.6;
-   padding-left: 10px;
-   padding-right: 10px;
+   padding-left: 2vw;
+   padding-right: 2vw;
    color: white;
    font-size: 2vw;
    background-color: rgba(1,23,23, 0.75);
-
+   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+   background-clip: content-box;
 
 }
 
@@ -176,6 +217,7 @@ header {
    color: white;
    font-size: 1.5vw;
    padding-left: 20px;
+   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 #DownloadOptions img {
@@ -215,6 +257,7 @@ header {
    text-align: left;
    color: white;
    font-size: 10vh;
+   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 
 }
 
@@ -222,6 +265,7 @@ header {
 
    color: white;
    font-size: 6vh;
+   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 
 }
 
@@ -229,6 +273,7 @@ header {
 
    color: white;
    font-size: 3.5vh;
+   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 
 }
 
@@ -238,3 +283,4 @@ header {
 
 
 }
+
