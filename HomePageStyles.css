@@ -218,9 +218,10 @@ body {
    flex-direction: row; /* Stack buttons horizontally */
    align-items: center; /* Center align buttons */
    gap: 15px; /* Add space between buttons */
+   padding-bottom: 30px;
 }
 
-#DownloadOptions button {
+#DownloadOptions a {
    background-color: transparent;
    border: 1px solid #383f51ff;
    color: #383f51ff;
@@ -230,10 +231,11 @@ body {
    cursor: pointer;
    transition: background-color 0.3s ease;
    width: 250px; /* Set a consistent width for buttons */
+
    text-align: center;
 }
 
-#DownloadOptions button:hover {
+#DownloadOptions a:hover {
    background-color: #383f51ff;
    color: #f8f4e3ff;
 }
