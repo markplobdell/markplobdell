@@ -12,9 +12,12 @@
    <meta name="viewport" content="width=device-width,initial-scale=1.0">
    <title>MarkLobdell.com</title>
    <link rel = "stylesheet" href="HomePageStyles.css">
-   <link href="https://fonts.cdnfonts.com/css/terminal" rel="stylesheet">
+   <script defer src="javascript.js"></script>
+  
 
-   <script src="javascript.js"></script>
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap" rel="stylesheet">
 
 </head>
 
@@ -26,7 +29,7 @@
       <div id = "NavBar">
 
          <p>
-            <a href= "#Footer">Contact</a> | <a href = "#Resume">Resume</a> | <a href = "#Portfolio">Portfolio</a>
+            <a href= "#AboutMe">About Me</a> | <a href = "#Resume">Resume</a> | <a href = "#Portfolio">Portfolio</a> | <a href = "#Footer">Contact</a>
          </p>
 
       </div>
@@ -36,12 +39,12 @@
          
          <div id = "Title">
 
-            <p id = "Name">
-               Mark Lobdell
+            <p id = "Name" class="fadeInAnimation">
+              Mark Lobdell
             </p>
    
-            <p id = "Description">
-               Computer Science Major | Intern for Hire
+            <p id = "Description" class="fadeInAnimation">
+               Aspiring Computer Scientist
             </p>
    
    
@@ -53,45 +56,98 @@
 
    </div>
 
+
+
+
    <div id = "AboutMe">
 
       
-      <p id = "Bio">
-         I grew up in Lombard, Illinois, about an hour away from Chicago. Growing up, I loved to
-         play soccer and videogames like Counter-Strike. In highschool, I became interested in tennis 
-         and found my passion for coding and computers. I went to the College of Dupage where I played tennis
-         went to nationals my last year. I moved to Texas in 2022 to persue my computer science degree at Austin College.
+      <img id = "TennisPicture" class="fadeInAnimation" src = "Tennis Picture.jpg">
+
+      <p id = "Bio" class="fadeInAnimation">
+         I grew up in Lombard, Illinois, about an hour from Chicago. As a kid, I loved playing soccer and video games like Counter-Strike. 
+         In high school, I discovered my interest in tennis and developed a passion for coding and computers. 
+         After competing at the national level in tennis for the College of Dupage, 
+         I moved to Texas in 2022 to pursue my studies at Austin College. 
+         I graduated in 2024 with a bachelor's degree in computer science.
       </p>
       
 
-      <img class = "TennisPicture" src = "Tennis Picture.jpg">
+      
 
  
 
    </div>
 
-   <div id = "Resume">
 
-      <img class = "ResumeIMG" src = "Resume.png">
+
+
+
+   <div  id = "Resume">
+
+      <table class="fadeInLeft">
+
+         <tbody>
+           <!-- Education Section -->
+           <tr>
+             <td rowspan="2">Education</td>
+             <td>
+               <strong>Bachelor of Science in Computer Science</strong><br>
+               Austin College — Sherman, TX<br>
+               August 2022 – December 2024<br>
+               GPA: 3.48
+             </td>
+           </tr>
+           <tr>
+             <td>
+               <strong>Associate in Science</strong><br>
+               College of DuPage — Glen Ellyn, IL<br>
+               August 2019 – May 2022<br>
+               GPA: 3.0
+             </td>
+           </tr>
+           <!-- Programming Languages -->
+           <tr>
+             <td>Programming Languages</td>
+             <td>
+               
+                 Java (5 years)<br>
+                 C++, Python, HTML/CSS, JavaScript (3 years)<br>
+                 SQL (1 year)
+               
+             </td>
+           </tr>
+           <!-- Technologies & Tools -->
+           <tr>
+             <td>Technologies & Tools</td>
+             <td>
+               APIs, JSON, Advanced Data Structures, Networking Principles, Search Algorithms, Object-Oriented Programming
+             </td>
+           </tr>
+           <!-- Software -->
+           <tr>
+             <td>Software</td>
+             <td>Microsoft Office Suite, Google Workspace</td>
+           </tr>
+         </tbody>
+       </table>
+       
+       
+
 
       <div id = "DownloadOptions">
 
 
-         <div id = "PDFOption">
+         <div id = "PDFOption" class ="fadeInLeft">
 
-            <img src="PDF Icon.png">
-
-            <a class = "Download" href = "Resume.pdf" download="Mark Lobdell Resume"> Download Resume as PDF </a>
+            <button class = "Download" href = "Mark Lobdell Resume.pdf" download="Mark Lobdell Resume"> Download Resume as PDF </button>
                
-
 
          </div>
 
-         <div id = "WordOption">
+         <div id = "WordOption" class ="fadeInLeft">
 
-            <img src="Word Icon.png">
-
-            <a class = "Download" href = "Resume.docx" download="Mark Lobdell Resume"> Download Resume as Word Document </a> >
+            <button class = "Download" href = "Mark Lobdell Resume.docx" download="Mark Lobdell Resume"> Download Resume as Word Document </button>
               
             
 
@@ -103,12 +159,19 @@
    </div>
 
 
+
+
+
+
+
+
+
    <div id = "Portfolio">
 
 
       <p class = "PortfolioHeading">Portfolio</p>
 
-      <div id = "PortfolioContainer">
+      <div id = "PortfolioContainer" class = "fadeInRight">
 
          <div id = "PortfolioTable">
 
@@ -118,26 +181,12 @@
 
                <div class="ProjectDiv">
 
-                  <p class = "ProjectHeading">Galaga Remastered</p>
+                  <p class = "ProjectHeading">Galaga</p>
                   <P class = "ProjectDescription">Galaga is a popular arcade that I remade and added <br> more content to as my final for a class on game design.</P>
 
                </div>
-
             </div>
 
-            <div class = "PortfolioItem">
-
-               <img class = "ProjectImage" src = "AbstractZoo.png">
-
-               <div class="ProjectDiv">
-
-                  <p class = "ProjectHeading">Abstract Zoo</p>
-                  <P class = "ProjectDescription">Abstract Zoo is a personal project I made to experiment <br>with increasing graphics quality as the game progresses. 
-                  </p>
-
-               </div>
-
-            </div>
 
             <div class = "PortfolioItem">
 
@@ -146,22 +195,46 @@
                <div class="ProjectDiv">
 
                   <p class = "ProjectHeading">Personal Website</p>
-                  <P class = "ProjectDescription">I coded this entire website using HTML/CSS. <br>Built and deployed using Github.</p>
+                  <P class = "ProjectDescription">I coded this entire website using HTML/CSS. <br>No WordPress or premade templates here.</p>
 
                </div>
             </div>
 
             <div class = "PortfolioItem">
 
-               <img class = "ProjectImage" src = "Sun.jpg">
+               <img class = "ProjectImage" src = "Sun.png">
 
                <div class="ProjectDiv">
 
                   <p class = "ProjectHeading">Javascript Weather Service</p>
-                  <P class = "ProjectDescription">I made a weather service website for my final project <br>of a HTML/CSS class.</p>
+                  <P class = "ProjectDescription">A website built to tell the wather and 7 day forecast <br>using a free API.</p>
 
                </div>
 
+            </div>
+
+            <div class = "PortfolioItem">
+
+               <img class = "ProjectImage" src = "Database.PNG">
+
+               <div class="ProjectDiv">
+
+                  <p class = "ProjectHeading">Voter Database</p>
+                  <P class = "ProjectDescription">An application to simulate voting in an<br> election. Coded using JavaFX and<br> a SQLite database.</p>
+
+               </div>
+            </div>
+
+            <div class = "PortfolioItem">
+
+               <img class = "ProjectImage" src = "Team Client.PNG">
+
+               <div class="ProjectDiv">
+
+                  <p class = "ProjectHeading">Slack</p>
+                  <P class = "ProjectDescription">A clone of the team communication app Slack.<br> Built on TCP/IP protocols to <br>update multiple clients and teams.</p>
+
+               </div>
             </div>
 
          </div>
@@ -178,13 +251,21 @@
 
    </div>
 
-   <footer id = "Footer">
+   
+ 
 
-      <p id  = "ContactHeader">Contact Me</p>
+</body>
+</html>
+
+
+
+<footer id = "Footer">
+
+      <p id  = "ContactHeader" class="fadeInAnimation"> Contact Me </p>
 
       <div id = "ContactOptions">
    
-         <div id = "EmailForm">
+         <div id = "EmailForm" class="fadeInAnimation">
 
             <form action="https://api.web3forms.com/submit" method="POST">
 
@@ -201,30 +282,37 @@
             </form>
          </div>
         
+         <table id = "ContactTable" class="fadeInAnimation">
+            <thead>
 
-         <div id = "LinkedIn">
+            <tbody>
 
-         <img src = "linkedin.png">
+              <tr>
+                <td><img id = "ContactIcon" src="Gmail.png" alt="Email Icon"></td>
+                <td><a href="mailto:markplobdell@gmail.com">markplobdell@gmail.com</a></td>
+              </tr>
 
-         <p> 
+              <tr>
+                <td><img id = "ContactIcon" src="Phone.png" alt="Phone Icon"></td>
+                <td>(331)-205-0761</td>
+              </tr>
 
-            Reach me Through My LinkedIn <br> <a href="https://www.linkedin.com/in/mark-lobdell-5b2343300"> www.linkedin.com/in/mark-lobdell-5b2343300 </a>
+              <tr>
+                <td><img id = "ContactIcon" src="LinkedIn.png" alt="LinkedIn Icon"></td>
+                <td><a href="https://www.linkedin.com/in/mark-lobdell-5b2343300/" target="_blank">LinkedIn Profile</a></td>
+              </tr>
 
-         </p>
-         
+              <tr>
+                <td><img id = "ContactIcon" src="GitHub.png" alt="GitHub Icon"></td>
+                <td><a href="https://github.com/markplobdell" target="_blank">GitHub Profile</a></td>
+              </tr>
+
+            </tbody>
+          </table>
+
+
          </div>
       </div>
 
-      <p id = "FooterText">
-
-      Author: Mark Lobdell<br>
-      Last Modified: 3/11/2024
-         
-      </p>
-
 
    </footer>
- 
-
-</body>
-</html>

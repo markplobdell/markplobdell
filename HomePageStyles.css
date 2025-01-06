@@ -1,12 +1,23 @@
-/*  JavaScript 7th Edition
-    
+/* JavaScript 7th Edition
+
    Filename: styles.css
-   
+
+--charcoal: #383f51ff;
+--lavender-web: #dddbf1ff;
+--yinmn-blue: #3c4f76ff;
+--dun: #d1beb0ff;
+--rose-quartz: #ab9f9dff;
+--cosmic-latte: #f8f4e3ff;
+
+background-color: #e5e5f7;
+opacity: 0.5;
+background: linear-gradient(135deg, #444cf755 25%, transparent 25%) -33px 0/ 66px 66px, linear-gradient(225deg, #444cf7 25%, transparent 25%) -33px 0/ 66px 66px, linear-gradient(315deg, #444cf755 25%, transparent 25%) 0px 0/ 66px 66px, linear-gradient(45deg, #444cf7 25%, #e5e5f7 25%) 0px 0/ 66px 66px;
+
 */
 
 
-
 /* apply a natural box layout model to all elements */
+
 * {
    -moz-box-sizing: border-box;
    -webkit-box-sizing: border-box;
@@ -43,489 +54,466 @@ footer, header, hgroup, menu, nav, section {
 
 body {
    line-height: 1;
-   width: auto;
-
-   
    min-width: 975px;
    min-height: 600px;
-}
+   background-color: rgb(248, 244, 227);
 
+
+   overflow-x: hidden;
+
+}
 
 /* Welcome screen */
 .WelcomeScreen {
-
-   background-image: url("screen_with_text.png");
-   background-size: cover;
-   background-position: center center;
-   background-clip: content-box;
-   height: 100vh; /* Set a minimum height to cover the entire viewport */
+   position: relative;
+   height: 100vh;
    width: 100vw;
+   overflow: hidden;
+   background-color: #f8f4e3ff;
+   display: flex;
+   flex-direction: column;
+   align-items: left;
+   justify-content: center;
+   text-align: left;
 }
-
 
 /*NAVIGATION BAR*/
-
 #NavBar{
-
    padding-top: 3%;
    padding-left: 3%;
-   font-size: 3.5vw;
-   color:white;
-   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-   
+   width: 60%;
+   font-size: clamp(1rem, 3vw, 3rem); /* Responsive font size */
+   color:#383f51ff;
+   background-color:#f8f4e3ff;
+   background-clip: content-box;
+   font-family: 'DM Serif Display', serif;
 
 }
 
+
+
 #NavBar a {
-
    text-decoration: none;
-
 }
 
 #NavBar a:visited{
-
-
-      color: white;
+   color: #383f51ff;
 }
 
 #NavBar a:link{
-
-
-   color: white;
+   color: #383f51ff;
 }
 
-
-
-/* CENTER TITLE*/
-
-
-#CenterTitle{
-
-   
-   display: flex;
-   flex-direction: row;
-   justify-content: center;
-   align-items: center;
-   height: 80%;
-
-
-}
-
-#Title{
-
-   background-color: rgb(1,23,23);
-   width: 80%;
-   height: 40%;
-
+/* CENTER TITLE */
+#CenterTitle {
    display: flex;
    flex-direction: column;
    justify-content: center;
-   align-items: center;
-
+   align-items: flex-start; /* Align to the left */
+   height: 80%;
+   width: 100%;
+   padding: 0 3%;
+   text-align: left;
 }
 
-#Name{
-
-   font-size: 15vh;
-   color: white;
-   text-align: center;
-   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-
-
+#Title {
+   width: 100%;
+   min-width: 800px; /* Restrict maximum width */
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: flex-start;
+   background-color: #f8f4e3ff;
 }
 
-#Description{
-
-   color: white;
-   font-size: 6vh;
-   text-align: center;
-   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-
+#Name {
+   font-size: clamp(2rem, 10vw, 10rem); /* Responsive font size */
+   width: 80%;
+   color: #383f51ff;
+   text-align: left;
+   font-family: 'DM Serif Display', serif;
+   margin-bottom: 1rem; /* Space between name and description */
 }
 
-
-
-
-
+#Description {
+   color: #383f51ff;
+   font-size: clamp(1rem, 4vw, 5rem); /* Responsive font size */
+   text-align: left;
+   font-family: 'DM Serif Display', serif;
+}
 
 #AboutMe {
-
    display: flex;
    justify-content: flex-end; /* Align to the right */
    align-items: center;
-   height: 100vh;
+   height: 70vh;
    width: 100vw;
-   background-image: url("Chicago.jpg");
-   background-size: 100% 100%;
-   
-
+   background-color: #f8f4e3ff;
 }
 
 #Bio{
-
    line-height: 1.6;
    padding-left: 2vw;
    padding-right: 2vw;
-   color: white;
+   color: 383f51ff;
    font-size: 2vw;
-   background-color: rgba(1,23,23, 0.75);
-   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+   font-family: 'DM Serif Display', serif;
    background-clip: content-box;
-
 }
 
 /* Tennis picture */
-.TennisPicture {
-  
+#TennisPicture {
    height: 50vh;
    width: 50vh;
-   padding-right: 20px;
+   border-radius: 15px 50px 15px 50px;
    
+   margin-left: 20px;
 }
 
-/* Resume section */
+
+
+
+
 #Resume {
    display: flex;
-   justify-content: flex-start;
-   align-items: center;
-   background-color: rgb(1,23,23);
-   padding-left: 20px;
+   flex-direction: column;
+   align-items: center; /* Center align horizontally */
+   justify-content: center; /* Center align vertically */
+   background-color: #f0f7ff;
    width: 100vw;
-   height: 100vh;
-
-
+   height: auto; /* Adjust to fit content */
+   padding-bottom: 20px;
 }
 
-/* Resume image */
-.ResumeIMG {
+#Resume table {
+   margin-bottom: 30px; /* Add space between the table and the buttons */
+   font-family: 'DM Serif Display', serif;
+   color: #383f51ff;
+   border-collapse: separate; /* Separate borders */
+   border-spacing: 20px; /* Add spacing between borders */
    
-   height: 90vh;
-   
-}
-
-#Portfolio{
-
-   background-color: rgb(1,23,23);
-   height: 100vh;
-
-}
-
-#DownloadOptions{
-
-   display: flex;
-   justify-content: space-between;
-   align-items: center;
-   flex-wrap: wrap;
    width: 100%;
-
-   padding-left: 20px;
-   padding-right: 20px;
-
+   max-width: 90%; /* Restrict maximum width */
+   overflow-x: auto; /* Allow horizontal scrolling if needed */
+   list-style: none; /* Remove bullet points */
 }
 
-#DownloadOptions a {
-
-   color: white;
-   text-decoration: none;
-   font-size: 45px;
-   padding-left: 20px;
-   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+#Resume table tr {
+   margin-top: 10px;
+   margin-bottom: 10px; /* Space between rows */
 }
 
-#DownloadOptions img {
+#Resume table td {
+   padding: 10px; /* Add space within table cells */
 
-   width: 127px; 
-   height: auto;
+   font-size: 200%;
 }
 
-#PDFOption{
 
+
+
+
+#DownloadOptions {
    display: flex;
-   justify-content: space-between;
-   align-items: center;
-   margin-bottom: 20px;
+   flex-direction: row; /* Stack buttons horizontally */
+   align-items: center; /* Center align buttons */
+   gap: 15px; /* Add space between buttons */
+}
 
+#DownloadOptions button {
+   background-color: transparent;
+   border: 1px solid #383f51ff;
+   color: #383f51ff;
+   font-size: 20px;
+   padding: 10px 20px;
+   font-family: 'DM Serif Display', serif;
+   cursor: pointer;
+   transition: background-color 0.3s ease;
+   width: 250px; /* Set a consistent width for buttons */
+   text-align: center;
+}
+
+#DownloadOptions button:hover {
+   background-color: #383f51ff;
+   color: #f8f4e3ff;
 }
 
 
-#WordOption{
 
-   display: flex;
-   justify-content: space-between;
-   align-items: center;
-   margin-bottom: 20px;
 
-}
+
+
 
 #Portfolio{
-
-   height: 135vh;
+   height: 160vh;
    width: 100vw;
-
+   background-color: #383f51ff;
 }
 
 #PortfolioContainer{
-
-
    display: flex;
    flex-direction: row;
    align-items: flex-start;
    flex-wrap: nowrap;
    flex-shrink: 0;
-
 }
 
 #PortfolioTable{
-
    display: flex;
    flex-direction: column;
    align-items: flex-start;
-   width: 55vw;
+   width: 55%;
 }
 
-
 #GitHubLink{
-
    display: flex;
    flex-direction: row;
    align-items: center;
    padding-left: 10vw;
    height: 110vh;
-
 }
 
 #GitHubLink p {
-
-
-   color:white;
-   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+   color: white;
+   font-family: 'DM Serif Display', serif;
    text-align: center;
    font-size: 4vh;
-
 }
 
 #GitHubLink a {
-
-
-   color:white;
-   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+   color: #f8f4e3ff;
+   font-family: 'DM Serif Display', serif;
    font-size: 4vh;
    text-decoration: underline;
-
 }
 
-
 .PortfolioHeading{
-
-   color: white;
+   color: #f0f7ff;
    font-size: 10vw;
-   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+   font-family: 'DM Serif Display', serif;
    padding-right: 2vw;
    text-align: right;
    height: 15vh;
    margin-bottom: 10vh;
-
 }
 
 .PortfolioItem{
-
    display: flex;
    align-items: flex-start;
    height: 20vh;
    margin-top: 5vh;
-   
-
 }
 
 .ProjectDiv{
-
    display: flex;
    flex-direction: column;
    align-items: stretch;
    flex-wrap: nowrap;
    padding-left: 2vw;
    height: 20vh;
-
-
 }
 
-
-
 .ProjectHeading{
-
-   color:white;
-   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+   color: #f0f7ff;
+   font-family: 'DM Serif Display', serif;
    font-size: 6vh;
    text-align: left;
-
 }
 
 .ProjectDescription{
-
-   color: white;
+   color: #f0f7ff;
    font-size: 3.15vh;
-   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+   font-family: 'DM Serif Display', serif;
    line-height: 2;
    vertical-align: middle;
    display: inline-block;
-   white-space: nowrap
-
+   white-space: nowrap;
 }
-
 
 .ProjectImage{
-
    height: 20vh;
    padding-left: 2vw;
-
 }
 
-#Footer{
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#Footer{
    width: 100vw;
    height: 70vh;
-
-   min-height: 530px;
-   background-color:#95969D;
+   max-height: 530px;
+   background-color: #f8f4e3ff;
    display: flex;
    flex-direction: column;
    align-items: flex-start;
    justify-content: space-between;
-   
-
+   padding-bottom: 20px;
 }
 
 #ContactHeader{
-
    text-align: left;
-   color: black;
+   color: #383f51ff;
    font-size: 80px;
-   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+   font-family: 'DM Serif Display', serif;
    margin-left: 2vw;
-
 }
-
 
 /* Styles for the Email Form */
 #EmailForm {
-
-   width: 40vw;
+   width: 100%;
+   max-width: 600px; /* Restrict maximum width for better layout */
    padding: 20px;
-   border: 1px solid #ccc;
+
    border-radius: 8px;
-   background-color: #f9f9f9;
-   padding-left: 20px;
-   display: flex;
-   align-items: flex-start;
-   margin-left: 2v;
-   
+   background-color: #f8f4e3ff;
+   padding: 20px auto; /* Center the form horizontally */
+   box-sizing: border-box; /* Ensure padding is included in width */
 }
  
 form {
    display: flex;
    flex-direction: column;
-
+   gap: 15px; /* Uniform spacing between inputs */
 }
  
 input[type="text"], input[type="email"], textarea {
-
-   width: 38vw;
-   margin-bottom: 15px;
+   width: 100%; /* Take full width of the form container */
    padding: 10px;
    border: 1px solid #ccc;
    border-radius: 5px;
    font-size: 16px;
-   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+   font-family: 'DM Serif Display', serif;
+   box-sizing: border-box; /* Ensure padding is included in width */
    resize: none;
 }
  
 textarea {
-
-   height: 25vh;
-
+   height: 150px; /* Set a fixed height for better consistency */
 }
 
-label{
-
-
-   font-size: 35px;
-   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-   margin-bottom: 20px;
-
+label {
+   font-size: 1.2rem;
+   font-family: 'DM Serif Display', serif;
 }
  
 button[type="submit"] {
-
    padding: 10px 20px;
    border: none;
    border-radius: 5px;
    background-color: #007bff;
    color: #fff;
-   font-size: 16px;
+   font-size: 1rem;
    cursor: pointer;
    transition: background-color 0.3s ease;
-
+   align-self: flex-start; /* Align button to the start */
 }
  
 button[type="submit"]:hover {
-
-   background-color: #0056b3;
-
+   background-color: #383f51ff;
 }
 
-
 #FooterText{
-
    margin-top: 20px;
    text-align: center;
-   color: rgb(0, 0, 0);
+   color:#d1beb0ff;
    width: 100vw;
    clear: both;
-
 }
 
 #ContactOptions{
-
    display: flex;
    flex-direction: row;
-   justify-content: space-evenly;
+   justify-content: space-around;
    width: 100%;
-
 }
 
-#LinkedIn{
+#ContactTable {
 
-   display: flex;
-   flex-direction: row;
-   align-items: center;
-   justify-content: space-between;
-   padding-left: 20px;
+   width: 80%;
+   max-width: 600px;
 
-}
-
-#LinkedIn p{
-
-   padding-left: 60px;
-   color: black;
-   font-size: 3.5vh;
-   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-   line-height: 1.5;
    
-}
+ }
 
-#LinkedIn a{
+ #ContactTable th, td {
+   
+   text-align: left;
+   vertical-align: middle;
+   font-family: 'DM Serif Display', serif;
+   color: #383f51ff;
+   font-size: 40px;
+   
+ }
 
+ #ContactIcon {
+
+   vertical-align: middle;
+   width: 40px;
+   height: 40px;
+   object-fit: contain;
+ }
+
+ #ContactTable a {
+   color: #383f51ff;
    text-decoration: none;
-   color: black;
-   font-size: 3.5vh;
-   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-
-}
-
-#LinkedIn img {
+ }
 
 
-   height: 30vh;
-   width: 30vh;
+ /* Class for Animations */
 
-}
+ .fadeInAnimation{
+
+   opacity: 0;
+   transition: all 2.5s;
+
+ }
+
+ .fadeInLeft{
+
+   opacity: 0;
+   filter: blur(5px);
+   transform: translateX(-100%);
+   transition: all 2.5s;
+
+
+ }
+
+ .fadeInRight{
+
+   opacity: 0;
+   filter: blur(5px);
+   transform: translateX(98%);
+   transition: all 2.5s;
+
+   
+ }
+ .showing{
+
+
+   opacity: 1;
+   filter: blur(0);
+   transform: translateX(0);
+
+ }
+
